@@ -1,14 +1,18 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+import PropTypes from "prop-types";
 
-import MovieCard from './MovieCard';
+import movieList from "./movieList";
+
 
 const MoviesList = ({ moviesArray }) => {
   return (
-    <div className='row mt-2'>
+    <div className="row mt-2">
       {moviesArray.map((movie, key) => (
-        <MovieCard movie={movie} key={key} />
+        <movieList movie={movie} key={key} />
+        
       ))}
+      
     </div>
   );
 };
@@ -17,4 +21,4 @@ MoviesList.propTypes = {
   moviesArray: PropTypes.array.isRequired,
 };
 
-export default MoviesList;
+export default movieList;
